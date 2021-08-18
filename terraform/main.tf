@@ -9,7 +9,7 @@ provider "aws" {
 
 
 
-resource "lambda_ex_role_policy" "lambda_policy" {
+resource "aws_iam_role_policy" "lambda_policy" {
   name = "lambda_ex_role"
   role = aws_iam_role.lambda_ex_role.id
   policy = file("LambdaBasicExecutionRole.json")
