@@ -23,5 +23,5 @@ resource "aws_lambda_function" "MLOps" {
   function_name = "MLOps"
   handler = "lambda_function.handler"
   role = "${aws_iam_role.lambda_ex_role.arn}"
-  runtime = "python3.9"
+  runtime = "python3.8"
 }
