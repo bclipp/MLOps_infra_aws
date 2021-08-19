@@ -34,5 +34,6 @@ resource "aws_lambda_function" "MLOps" {
   handler = "lambda_function.handler"
   role = "${aws_iam_role.lambda_ex_role.arn}"
   runtime = "python3.8"
-  filename = "init_zip.zip"
+  s3_bucket = "bclipp-mlops-demo"
+  s3_key    = "models/1/lambda_deployment_function.zip"
 }
